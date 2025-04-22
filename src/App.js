@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  MyVariable = 12 + 45
+ const MyVariable = 12 + 45
   
   return (
     <div className="App">
