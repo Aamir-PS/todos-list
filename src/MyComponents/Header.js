@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 export default function Header(props) {
   return (
     
-    <>
+    
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          {props.titel}
+          {props.title}
         </a>
         <button
           className="navbar-toggler"
@@ -35,7 +35,7 @@ export default function Header(props) {
             </li>
             
           </ul>
-          {/*{props.searchBar ?*/} <form className="d-flex" role="search">
+          {props.searchBar ? <form className="d-flex" role="search">
             <input
               className="form-control me-2"
               type="search"
@@ -46,23 +46,23 @@ export default function Header(props) {
               Search
             </button>
           </form> 
-          {/*: "no search bar"}*/}
+          : "no search bar" }
         </div>
       </div>
     </nav>
     
-  </>
+  
   )
  
 }
 
 Header.defaultProps = {
-    title: "Your Title Here",
-    // searchBar: false
+  title: "Your Title Here",
+    // searchBar: true
 }
 
 Header.propTypes = {
-    title: PropTypes.string ,
+  title: PropTypes.string ,
     searchBar: PropTypes.bool.isRequired
 }
 
