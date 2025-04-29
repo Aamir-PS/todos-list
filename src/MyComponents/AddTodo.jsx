@@ -5,13 +5,17 @@ export const AddTodo = ({addTodo}) => {
     // const [title, setTitle] = useState
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
-    const submit = (e) => {
 
-        e.preventDefault(e);
+    const submit = (e) => {
+        e.preventDefault();
         if(!title || !desc){
             alert("title or Description cannot be blank")
         }
+        else{
         addTodo(title, desc)
+        setTitle("");
+        setDesc("");
+    }
         
     }
     return (
