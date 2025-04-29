@@ -3,9 +3,14 @@ import {TodoItem} from './TodoItem'
 
 
 export const Todos = (props) => {
+  let todosStyle = {
+    marginBottom: "150px"
+  }
+
+
   return (
     <>
-     <div className="container">
+     <div className="container mb-[5vw]" style={todosStyle}>
     
       <h3 className="bg-danger text-white text-center">Todos List</h3>
       
